@@ -4,8 +4,12 @@
 \alias{search_360}
 \title{Search TC/Govdata360 indicators, countries, categories, and dataset lists}
 \usage{
-search_360(search_string = "World Bank", site = "tc",
-  search_type = NULL, limit_results = NULL)
+search_360(
+  search_string = "World Bank",
+  site = "tc",
+  search_type = NULL,
+  limit_results = NULL
+)
 }
 \arguments{
 \item{search_string}{string to query in TC/Govdata360}
@@ -23,8 +27,8 @@ Leaving this NULL will return all possible search results.}
 List containing top search results
 }
 \description{
-Searches using the TCdata360 API at \url{tcdata360.worldbank.org/docs}
-or Govdata360 API at \url{govdata360.worldbank.org/docs}.
+Searches using the TCdata360 API at \url{https://tcdata360.worldbank.org/docs}
+or Govdata360 API at \url{https://govdata360.worldbank.org/docs}.
 The function generates a wide dataframe containing the top search results related to the query.
 }
 \details{
@@ -36,20 +40,21 @@ Hint: Want to use your search results to call data? Helpful functions include:
 }
 }
 \examples{
-##examples that take > 5 sec to run are not run for examples using "dontrun"
+## Since all functions download data through API, these are wrapped with
+## the "donttest" function as advised by CRAN
 #search a country's code in TCdata360
-\dontrun{search_360('Philippines', search_type = 'country')}
+\donttest{search_360('Philippines', search_type = 'country')}
 
 #search for top 10 relevant indicator codes in TCdata360
-\dontrun{search_360('GDP', search_type = 'indicator', limit_results = 10)}
+\donttest{search_360('GDP', search_type = 'indicator', limit_results = 10)}
 
 #search for top 10 indicators of a database in TCdata360
-\dontrun{search_360('World Development Indicators', search_type = 'indicator',
+\donttest{search_360('World Development Indicators', search_type = 'indicator',
 limit_results = 10)}
 
 #search for top 10 indicators of a data provider in TCdata360
-\dontrun{search_360('WEF', search_type = 'indicator', limit_results = 10)}
+\donttest{search_360('WEF', search_type = 'indicator', limit_results = 10)}
 
 #search for top 10 relevant categories in Govdata360
-\dontrun{search_360('Governance', site='gov', search_type = 'category', limit_results = 10)}
+\donttest{search_360('Governance', site='gov', search_type = 'category', limit_results = 10)}
 }

@@ -19,8 +19,8 @@ Possible choices: 'countries' == Lists metadata for all countries and regions.
 Data frame (wide) containing requested metadata
 }
 \description{
-Downloads the requested metadata by using the TCdata360 API at \url{tcdata360.worldbank.org/docs}
-or Govdata360 API at \url{govdata360.worldbank.org/docs}.
+Downloads the requested metadata by using the TCdata360 API at \url{https://tcdata360.worldbank.org/docs}
+or Govdata360 API at \url{https://govdata360.worldbank.org/docs}.
 The function generates a wide dataframe.
 }
 \details{
@@ -32,13 +32,14 @@ Hint: Want to get other data? Helpful functions include:
 }
 }
 \examples{
-##examples that take > 5 sec to run are not run for examples using "dontrun"
+## Since all functions download data through API, these are wrapped with
+## the "donttest" function as advised by CRAN
 #get all indicator metadata in Govdata360
-\dontrun{df_indicators <- get_metadata360(site="gov", metadata_type = "indicators")}
+\donttest{df_indicators <- get_metadata360(site="gov", metadata_type = "indicators")}
 
 #get all country metadata in TCdata360
-df_countries <- get_metadata360(metadata_type = 'countries')
+\donttest{df_countries <- get_metadata360(metadata_type = 'countries')}
 
 #get all dataset metadata in TCdata360
-\dontrun{df_datasets <- get_metadata360(metadata_type = 'datasets')}
+\donttest{df_datasets <- get_metadata360(metadata_type = 'datasets')}
 }
