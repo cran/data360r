@@ -1,7 +1,7 @@
 Package: data360r
 Type: Package
 Title: Wrapper for 'TCdata360' and 'Govdata360' API
-Version: 1.0.8
+Version: 1.0.9
 Authors@R: c(
     person("Ramin", "Aliyev", email = "tcdata360@worldbank.org", role = "cre"),
     person("Ma. Regina Paz", "Onglao-Drilon", email = "reg@drilon.com", role = "aut"),
@@ -16,16 +16,15 @@ Description: Makes it easy to engage with the Application Program Interface (API
     related information, as well as searching based on user-inputted query.
 License: MIT + file LICENSE
 Encoding: UTF-8
-LazyData: true
 URL: https://github.com/mrpsonglao/data360r
-Date: 2020-04-20
-Imports: data.table, reshape2, jsonlite, utils, curl
+Date: 2022-06-09
+Imports: data.table, reshape2, jsonlite, utils
 RoxygenNote: 7.1.0
 NeedsCompilation: no
-Packaged: 2020-04-29 13:18:48 UTC; admin
+Packaged: 2022-06-09 19:14:54 UTC; wb578064
 Author: Ramin Aliyev [cre],
   Ma. Regina Paz Onglao-Drilon [aut],
   World Bank Group [cph]
 Maintainer: Ramin Aliyev <tcdata360@worldbank.org>
 Repository: CRAN
-Date/Publication: 2020-04-30 17:40:02 UTC
+Date/Publication: 2022-06-10 09:10:06 UTC
